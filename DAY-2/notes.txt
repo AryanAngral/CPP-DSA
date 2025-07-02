@@ -1,0 +1,47 @@
+1. Types if Programming :
+    i Objecct Oriented Programming
+    ii Functional Programming
+    iii Procedural Programming
+    iv Declarative Programming
+2. Object Oriented Programming :
+    i Class
+    ii Object
+    iii Inheritance
+    iv Polymorphism
+    v Encapsulation
+3. Functional Programming :
+    i First Class Functions
+    ii Higher Order Functions
+    iii Pure Functions
+    iv Immutability
+4. Procedural Programming :
+    i Sequence of Statements
+    ii Functions
+    iii Variables   
+5. Declarative Programming :
+    i Focus on What to Solve    
+    ii Abstracts Control Flow
+6. Key Concepts in Programming :
+    i Variables
+    ii Data Types
+    iii Control Structures
+    iv Functions
+    v Error Handling
+
+
+
+
+Types of pointers in Cpp:
+1. Null Pointer: A pointer that does not point to any valid memory location.
+2. Void Pointer: A pointer that can point to any data type but cannot be dereferenced without casting.
+3. Wild Pointer: A pointer that points to a random memory location, often uninitialized.
+4. Dangling Pointer: A pointer that points to a memory location that has been freed or deleted.
+5. Smart Pointer: A pointer that manages the memory automatically, such as `std::unique_ptr` and `std::shared_ptr` in C++.
+6. Function Pointer: A pointer that points to a function instead of a data variable.
+// 7. Pointer to Pointer: A pointer that points to another pointer, allowing for multi-level indirection.
+8. Constant Pointer: A pointer whose address cannot be changed after initialization, but the value it points to can be modified.
+9. Pointer to Constant: A pointer that points to a constant value, meaning the value cannot be changed through the pointer.
+10. Reference Pointer: A pointer that acts as an alias for another variable, allowing indirect access to the variable's value.
+11. Array Pointer: A pointer that points to the first element of an array, allowing access to the entire array.
+12. Member Function Pointer: A pointer that points to a member function of a class, allowing access to class methods.
+13. Pointer to Member: A pointer that points to a member variable of a class, allowing access to class attributes.
