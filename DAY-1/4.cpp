@@ -4,7 +4,7 @@ using namespace std;
 
 class student{
     string roll;
-    string name;
+    string cgpa;
     public: 
     
     student(){
@@ -12,21 +12,21 @@ class student{
         cout<< this<<endl;
     }
     
-    student(string r,string n): roll(r), name(n){
-        // used initializer list roll(r) and name(n)
+    student(string r,string n): roll(r), cgpa(n){
+        // used initilizer list roll(r) and name(n)
         cout<< this <<endl;
     }
     public: 
     
     void display(){
         cout<<roll<<endl;
-        cout<<name<<endl;
+        cout<<cgpa<<endl;
     
     }
 };
 
 int main(){
-    student s1("2022a1r080","Aryan Angral");
+    student s1("2022a1r080","9.3");
     s1.display();
 
     // cout<< &s1<<endl;
