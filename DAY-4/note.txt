@@ -1,0 +1,98 @@
+Why we are here?
+To learn and understand the concepts of Data Structures and Algorithms using C++.
+To upskill ourselves in the field of programming.
+To prepare for technical interviews and improve problem-solving skills.
+To build a strong foundation in computer science principles.
+To explore various data structures and algorithms and their applications.
+To enhance coding efficiency and performance in software development.
+To collaborate and share knowledge with peers in the programming community.
+To gain practical experience through hands-on coding exercises and projects.
+To stay updated with the latest trends and advancements in technology.
+To develop critical thinking and analytical skills through algorithmic challenges.
+
+Why do we need skills?
+Skills are essential for personal and professional growth in the field of programming and software development. They enable individuals to:
+1. Solve complex problems efficiently.
+2. Write clean, maintainable, and efficient code.
+3. Adapt to new technologies and programming languages.
+4. Collaborate effectively with team members and stakeholders.
+5. Build robust and scalable software solutions.
+6. Prepare for technical interviews and career advancement.
+7. Contribute to open-source projects and the programming community.
+8. Stay competitive in the ever-evolving tech industry.
+9. Enhance creativity and innovation in software design and development.
+10. Foster a mindset of continuous learning and improvement in programming skills.
+11. Develop a strong understanding of algorithms and data structures.
+12. Gain confidence in tackling real-world programming challenges.
+13. Improve debugging and problem-solving techniques.
+14. Cultivate a passion for coding and software development.
+
+
+Requirements for DSA
+1. Premitive and non-premitive data types.
+
+
+namespaces is defined as a declarative region that provides a scope to the identifiers (variables, functions, classes, etc.) inside it. It helps in avoiding name conflicts and organizing code logically.
+which means that the same name can be used for different entities in different namespaces without causing ambiguity.
+
+data type is defined as a classification that specifies which type of value a variable can hold. It determines the size, range, and operations that can be performed on the data.
+
+and data structuresare specialized formats for organizing, processing, and storing data efficiently. They provide a way to manage large amounts of data and perform operations on it effectively.
+data types
+there are total of 4 types of data types in c++.
+1. Primitive Data Types: These are the basic data types provided by C++. They include:
+    - int: Represents integer values.
+    - float: Represents floating-point numbers.
+    - double: Represents double-precision floating-point numbers.
+    - char: Represents single characters.
+    - bool: Represents boolean values (true or false).
+2. Derived Data Types: These are data types that are derived from the primitive data types. They include:
+    - Arrays: A collection of elements of the same data type.
+    - Pointers: Variables that store memory addresses of other variables.
+    - Functions: Blocks of code that perform specific tasks and can return values.
+3. User-Defined Data Types: These are data types defined by the user using the primitive and derived data types. They include:
+    - Structures: A collection of variables of different data types grouped together.
+    - Unions: Similar to structures, but only one member can hold a value at a time.
+    - Enumerations: A user-defined data type that consists of a set of named integer constants.
+4. Abstract Data Types (ADTs): These are data types that are defined by their behavior rather than their implementation. They include:
+    - Lists: A collection of elements that can be accessed sequentially.
+    - Stacks: A collection of elements that follows the Last In First Out (LIFO) principle.
+    - Queues: A collection of elements that follows the First In First Out (FIFO) principle.
+
+5. Standard Data Types: These are data types provided by the C++ Standard Library, such as:
+    - std::string: Represents a sequence of characters (string).
+    - std::vector: Represents a dynamic array that can grow and shrink in size.
+6. Special Data Types: These are data types that have specific purposes, such as:
+    - std::pair: Represents a pair of values.
+    - std::tuple: Represents a fixed-size collection of values of different types.
+7. Function Types: These are types that represent functions, including:
+    - Function pointers: Pointers that point to functions.
+    - Function objects: Objects that can be called like functions.
+    - Lambda expressions: Anonymous functions that can capture variables from their surrounding scope.
+
+
+
+                                            Data Type
+                   primitive                                                non-primitive
+
+          numeric                                 non-numeric               derived         user defined
+
+    absolute/exact         approximate                                     -array
+                single precision double precision                          -pointer
+                    float           double                                 -function   
+
+
+
+
+wide char in cpp is a data type that is used to represent characters in a wider range than the standard char type. It is typically used to support internationalization and character sets that require more than 256 characters, such as Unicode.
+Wide char is defined as wchar_t in C++. It can store a larger set of characters, including special characters, symbols, and characters from different languages. The size of wchar_t is usually 2 or 4 bytes, depending on the platform and compiler.  
+example of wide char in C++:
+```cpp
+#include <iostream>
+#include <cwchar>
+
+int main() {
+    wchar_t wideChar = L'あ';  // Japanese character
+    std::wcout << L"Wide char: " << wideChar << std::endl;
+    return 0;
+}
