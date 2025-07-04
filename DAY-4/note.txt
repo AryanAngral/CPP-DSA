@@ -77,12 +77,18 @@ there are total of 4 types of data types in c++.
 
           numeric                                 non-numeric               derived         user defined
 
-    absolute/exact         approximate                                     -array
-                single precision double precision                          -pointer
-                    float           double                                 -function   
+    absolute/exact         approximate                                     -array           -structure
+                single precision double precision                          -pointer         -union
+                    float           double                                 -function        -class
+                    
+bitset is a non-primitive data type in C++ that represents a fixed-size sequence of bits. It is part of the C++ Standard Library and is defined in the <bitset> header. Bitsets are useful for efficiently storing and manipulating binary data, such as flags or binary representations of numbers.
+it is derived from the primitive data type bool, which can hold only two values: true or false (or 1 and 0). A bitset allows you to create a sequence of bits, where each bit can be accessed and modified individually.
+bitset in C++ is a data type that represents a fixed-size sequence of bits. It is part of the C++ Standard Library and is defined in the <bitset> header. Bitsets are useful for efficiently storing and manipulating binary data, such as flags or binary representations of numbers.
 
+A bitset is created by specifying the number of bits it should contain. Each bit can be accessed and modified individually. Bitsets provide various member functions for performing bitwise operations, counting set bits, and converting to/from strings.
 
-
+bitset in c is defined as a sequence of bits that can be manipulated individually. It is used to represent a fixed-size sequence of bits, where each bit can be either 0 or 1. Bitsets are useful for efficiently storing and manipulating binary data, such as flags or binary representations of numbers.
+In C++, a bitset is defined as a template class that allows you to create a fixed-size sequence of bits. It provides various member functions for manipulating individual bits, performing bitwise operations, and converting to/from strings.
 
 wide char in cpp is a data type that is used to represent characters in a wider range than the standard char type. It is typically used to support internationalization and character sets that require more than 256 characters, such as Unicode.
 Wide char is defined as wchar_t in C++. It can store a larger set of characters, including special characters, symbols, and characters from different languages. The size of wchar_t is usually 2 or 4 bytes, depending on the platform and compiler.  
@@ -96,3 +102,277 @@ int main() {
     std::wcout << L"Wide char: " << wideChar << std::endl;
     return 0;
 }
+
+
+does c has pointers?
+Yes, C has pointers. Pointers are a fundamental feature of the C programming language that allow you to directly manipulate memory addresses. A pointer is a variable that stores the address of another variable, enabling dynamic memory allocation, array manipulation, and efficient data structures.
+Pointers are declared using the asterisk (*) symbol, and they can be used to access and modify
+
+does c has call by reference?
+Yes, C supports call by reference through the use of pointers. In C, when you pass a pointer to a function, you are effectively passing the address of the variable, allowing the function to modify the original variable's value. This is often referred to as "call by reference" because the function can access and modify the data at the memory address pointed to by the pointer.
+
+correct ---- no its called call by address
+In C, there is no direct support for call by reference like in C++. However, you can achieve similar functionality by passing pointers to functions. When you pass a pointer to a function, you are passing the address of the variable, allowing the function to modify the original variable's value. This is often referred to as "call by address" in C.
+Here is an example of how to use pointers for call by address in C:
+```c
+#include <stdio.h>      
+void modifyValue(int *ptr) {
+    *ptr = 20; // Modify the value at the address pointed to by ptr
+}
+int main() {
+    int value = 10;
+    printf("Before: %d\n", value);
+    modifyValue(&value); // Pass the address of value
+    printf("After: %d\n", value);
+    return 0;
+}
+```
+In this example, the `modifyValue` function takes a pointer to an integer and modifies the value at the address pointed to by the pointer. This allows the function to change the original variable's value in the calling function.
+
+
+types of constructors in c++
+In C++, constructors are special member functions that are automatically called when an object of a class is created. They are used to initialize the object's data members. There are several types of constructors in C++:
+1. Default Constructor: A constructor that takes no parameters or has default values for all its parameters. It initializes the object with default values.
+   ```cpp
+   class MyClass {
+   public
+         MyClass() {
+              // Default constructor
+         }
+    };
+    ```
+2. Parameterized Constructor: A constructor that takes parameters to initialize the object with specific values.
+   ```cpp
+   class MyClass {
+   public
+            MyClass(int x) {
+                // Parameterized constructor
+            }
+        };
+        ```
+3. Copy Constructor: A constructor that creates a new object as a copy of an existing object. It takes a reference to an object of the same class as a parameter.
+
+    ```cpp
+    class MyClass {
+    public
+            MyClass(const MyClass &obj) {
+                // Copy constructor
+            }
+        };
+    ``` 
+4. Move Constructor: A constructor that transfers ownership of resources from a temporary object to a new object. It is used to optimize performance by avoiding unnecessary copying.
+   ```cpp
+   class MyClass {
+   public:
+       MyClass(MyClass &&obj) {
+           // Move constructor
+       }
+   };
+    ```
+5. Delegating Constructor: A constructor that calls another constructor in the same class to perform common initialization tasks.
+   ```cpp
+   class MyClass {
+   public:
+       MyClass(int x) {
+           // Parameterized constructor
+       }
+       MyClass() : MyClass(0) {
+           // Delegating constructor
+       }
+   };
+   ```
+6. Explicit Constructor: A constructor that is declared with the `explicit` keyword to prevent implicit conversions from other types to the class type.
+   ```cpp
+   class MyClass {
+   public:
+       explicit MyClass(int x) {
+           // Explicit constructor
+       }
+   };
+   ```
+7. Conversion Constructor: A constructor that allows implicit conversion from a single argument of a different type to the class type.
+   ```cpp
+   class MyClass {
+   public:
+       MyClass(double x) {
+           // Conversion constructor
+       }
+   };
+   ```
+8. Aggregate Initialization Constructor: A constructor that allows initialization of an object using aggregate initialization syntax, which is a list of values enclosed in braces.
+   ```cpp
+   class MyClass {
+   public:
+       MyClass(int a, double b) {
+           // Parameterized constructor
+       }
+   };
+   ``` 
+9. Inline Constructor: A constructor defined inside the class definition, which can be used for simple initialization tasks.
+   ```cpp
+   class MyClass {
+   public:
+       MyClass(int x) {
+           // Parameterized constructor
+       }
+   };
+   ```  
+
+
+
+ # Methods : 
+    it is a synonym for function in c++.
+    Methods are functions that are associated with a class and can access the class's data members. They are defined within the class definition and can be called on objects of that class.
+    Methods can be classified into two types:
+1. Member Functions: These are functions that are defined within a class and can access the class's data members. They can be called on objects of the class.
+   ```cpp
+   class MyClass {
+   public:
+       void myMemberFunction() {
+           // Member function code
+       }
+   };
+   ```
+2. Static Member Functions: These are functions that are associated with the class itself rather than with any specific object. They can be called without creating an instance of the class.
+   ```cpp
+   class MyClass {
+   public:
+       static void myStaticFunction() {
+           // Static function code
+       }
+   };
+   ``` 
+#ways to declare methods:
+1. Regular Method Declaration:
+   ```cpp
+   void myMethod();
+   ```
+2. Inline Method Definition:
+   ```cpp
+   void myMethod() {
+       // Method code
+   }
+   ```
+3. Static Method Declaration:
+   ```cpp
+   static void myStaticMethod();
+   ```
+4. Const Method Declaration:
+   ```cpp
+   void myConstMethod() const;
+   ```
+5. Virtual Method Declaration:
+   ```cpp
+   virtual void myVirtualMethod();
+   ```
+6. Pure Virtual Method Declaration (for abstract classes):
+   ```cpp
+   virtual void myPureVirtualMethod() = 0;
+   ```
+7. Friend Method Declaration (to allow access to private members of another class):
+   ```cpp
+   friend void myFriendFunction(MyClass &obj);
+   ```
+8. Template Method Declaration (for generic programming):
+   ```cpp
+   template <typename T>
+   void myTemplateMethod(T arg);
+   ```
+9. Lambda Method Declaration (for inline anonymous functions):
+   ```cpp
+   auto myLambda = [](int x, int y) {
+       return x + y;
+   };
+   ```
+
+
+
+inside calass and outside class
+In C++, methods (member functions) can be defined both inside and outside the class definition.
+1. Inside Class Definition:
+   When a method is defined inside the class definition, it is called an inline method. This means that the method's code is directly included in the class definition, and it can be called without needing to define it separately.
+   ```cpp
+   class MyClass {
+   public:
+       void myMethod() {
+           // Method code
+       }
+   };
+   ```
+2. Outside Class Definition:
+   When a method is defined outside the class definition, it is declared in the class and then defined separately. This allows for better organization of code, especially for larger classes.
+   ```cpp
+   class MyClass {
+   public:
+       void myMethod();
+   };
+   ```
+   ```cpp
+   void MyClass::myMethod() {
+       // Method code
+   }
+   ```
+
+
+
+# Constructors in C++:
+In C++, constructors are special member functions that are automatically invoked or called when an object of a class is created. They are used to initialize the object's data members. Constructors have the same name as the class and do not have a return type.
+
+Key points with respect to constructors:
+1. Constructor Name: The constructor's name must match the class name exactly.
+   i.e Constructor name is same as class name. Constructor name == class name.
+2. Automatically Invoked: Constructors are automatically called when an object of the class is created, either on the stack or heap.
+3. For Constructor memory will be allocated only once when the object is created.
+4. No Return Type: Constructors do not have a return type, not even void.
+5.With respect to parameterized constructors we can pass the arguments at the time of object creation with the help of parentheses.
+6. Constructors should be public so that they can be accessed when creating objects.
+
+
+Types of Constructors in C++:
+Majorly there are Three types of constructors in C++:
+1. Default Constructor: A constructor that takes no parameters or has default values for all its parameters
+    - it is automatically created when an object is created without any arguments when we donot create any constructor in the class then compiler will create a default constructor for us.
+    
+    ```cpp
+    class MyClass {
+    public:
+        MyClass() {
+            // Default constructor code
+        }
+    };
+    ```
+
+2. Non-Parameterized Constructor: A constructor that does not take/have any parameters.
+    ```cpp
+    class MyClass {
+    public:
+        MyClass() {
+            // Non-parameterized constructor code
+        }
+    };
+    ```
+
+3. Parameterized Constructor: A constructor that takes parameters to initialize the object with specific values.
+    ```cpp
+    class MyClass {
+    public:
+        MyClass(int x, int y) {
+            // Parameterized constructor code
+        }
+    };
+    ```
+3. Copy Constructor: A constructor that creates a new object as a copy of an existing object. It takes a reference to an object of the same class as a parameter.
+    ```cpp
+    class MyClass {
+    public:
+        MyClass(const MyClass &obj) {
+            // Copy constructor code
+        }
+    };
+    ```
+
+
+
+# Encapsulation in C++:
+ The wraping of data and functions into a single unit (class) is called encapsulation.
+ 
