@@ -33,6 +33,8 @@ int main() {
         cout<<head->data<<endl;
         head=head->next;
     }
+
+    cout <<  (*(n1->next)).data;
     cout<<head->data;
 
     return 0;
