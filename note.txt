@@ -387,4 +387,50 @@ int main() {
 
 # Encapsulation in C++:
  The wraping of data and functions into a single unit (class) is called encapsulation.
+Encapsulation is a fundamental principle of object-oriented programming (OOP) that restricts direct access to an object's data members and methods. It allows for data hiding and abstraction, ensuring that the internal state of an object can only be modified through well-defined interfaces (methods).
+Key points with respect to encapsulation:
+1. Data Hiding: Encapsulation allows you to hide the internal state of an object from the outside world, exposing only what is necessary through public methods.
+2. Access Modifiers: C++ provides access modifiers (public, private, and protected)
+    to control the visibility of class members. 
+    - Public members can be accessed from outside the class.
+    - Private members can only be accessed within the class itself.
+    - Protected members can be accessed by derived classes.
+3. Abstraction: Encapsulation helps in achieving abstraction by providing a clear interface for interacting with an object while hiding its implementation details.
+4. Maintainability: Encapsulation improves code maintainability by allowing changes to the internal implementation without affecting the external interface. This means that you can modify the internal workings of a class without changing how it is used by other parts of the code.
+5. Reusability: Encapsulation promotes code reusability by allowing you to create classes that can be easily reused in different contexts without exposing their internal details.
+6. Security: Encapsulation enhances security by preventing unauthorized access to an object's internal state, ensuring that only valid operations can be performed on the data.
  
+
+# Static Data and member functions in C++:
+Static data members and static member functions in C++ are associated with the class itself rather than with any specific object of the class. They are shared among all instances of the class and can be accessed without creating an object of the class.
+
+
+
+Types of functions in C++:
+1. Library Functions: These are pre-defined functions provided by the C++ Standard Library, such as `cout`, `cin`, `sqrt()`, etc. They are used for various tasks like input/output operations, mathematical calculations, and string manipulations.
+2. User-Defined Functions: These are functions defined by the programmer to perform specific tasks. They can be further classified into:
+   - Regular Functions: Functions that take parameters and return a value.
+   - Void Functions: Functions that do not return a value (return type is void).
+   - Recursive Functions: Functions that call themselves to solve a problem.
+   - Inline Functions: Functions defined with the `inline` keyword to suggest to the compiler to expand the function code at the point of call.
+   - Lambda Functions: Anonymous functions that can capture variables from their surrounding scope.
+3. Special Member Functions: These are functions that are automatically called by the compiler for specific operations, such as:
+   - Constructors: Special functions used to initialize objects of a class.
+   - Destructors: Special functions used to clean up resources when an object is destroyed.
+   - Copy Constructors: Functions that create a new object as a copy of an existing object.
+   - Assignment Operators: Functions that assign the value of one object to another.
+
+Types of user defined functions in c++
+there are two types of user-defined functions in C++:
+1. Inline Functions: These are functions defined with the `inline` keyword, which suggests to the compiler to replace the function call with the function code at the point of call. This can improve performance by reducing function call overhead.
+2. Recursive Functions: Functions that call themselves to solve a problem.
+   Recursive functions are used to solve problems that can be broken down into smaller subproblems of the same type.
+
+Types of functions in C++
+1. Regular Functions: Functions that take parameters and return a value.
+2. Void Functions: Functions that do not return a value (return type is void).
+3. Recursive Functions: Functions that call themselves to solve a problem.
+4. Inline Functions: Functions defined with the `inline` keyword to suggest to the compiler to expand the function code at the point of call.
+5. Lambda Functions: Anonymous functions that can capture variables from their surrounding scope.
+
+
