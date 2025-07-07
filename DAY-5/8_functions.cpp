@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void func(){
+void func(void){
     cout<<"Hello, world!";
 }
 
