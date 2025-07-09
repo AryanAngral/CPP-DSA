@@ -460,3 +460,10 @@ Types of functions in C++
     - The `this` keyword is a pointer that points to the object for which a member function is called.
     - It is used to access members (variables and functions) of the current object.
     - It helps to distinguish between member variables and parameters with the same name.
+
+
+
+# Static data member:
+    - Static data members are shared among all instances of a class.
+    - They are defined using `static` keyword.
+    - When static is used with data memeber in a class, it makes the variable shared among all objects of the class.
