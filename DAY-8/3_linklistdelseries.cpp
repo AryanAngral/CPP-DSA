@@ -78,6 +78,88 @@ void print(node *head){
         temp=temp->next;
     }
 }
+
+void deleteTail(node* head){
+    if(head ==NULL){
+        cout<<"List empty!"<<endl;
+        return;
+    }
+    node * temp = head;
+    while (temp->next!=NULL){
+        temp=temp->next;
+    }
+    
+    (temp->prev)->next=NULL;
+    delete temp;
+}
+
+void deleteSeries(node *head, int start, int end){
+    if(head == NULL){
+        cout<< " Empty list !"<<endl;
+        return;
+    }
+    node * temp =head;
+    while (temp->prev!=NULL)
+    {
+        temp=temp->prev;
+    }
+    node * anchor = temp;
+    node * anchor2 = temp;
+    int i =1;
+
+    while(temp->next!=NULL){
+        if(i== start  ){
+            anchor = temp->prev;
+        }
+        if(i == end){
+            anchor2 = temp->next;
+        }
+        i=i+1;
+        // delete temp;
+        temp= temp->next;
+
+    }
+    anchor->next =anchor2;
+    anchor2->prev= anchor;
+    // for (int i =0 ;i<end;i++){
+    //     if(i==start){
+    //         temp->prev->next=NULL;
+    //         anchor = temp->prev;
+    //     }
+    //     if(i>start && i<end){
+    //         delete temp;
+    //     }
+    //     if(i==end){
+    //         anchor->next=temp;
+    //         temp->next=NULL;
+    //         temp->prev=anchor;
+    //     }
+
+    //     temp=temp->next;
+    // }
+    // int i =0 ;
+    // while (temp->next!=NULL)
+    // {
+    //     if(i+1==start){
+    //         anchor = temp->prev;
+    //     }
+    //     if(i+1 == end){
+    //         anchor->next=temp;
+    //         temp->prev=anchor;
+    //     }
+    //     if(i >start&& i+1<end){
+    //         delete temp;
+    //     }
+
+    //     i++;
+    //     temp=temp->next;
+    //     delete temp;
+    // }
+    
+    
+    
+}
+
 void printrev(node *head){
     node *temp= head;
     if(temp==NULL)
@@ -104,13 +186,19 @@ int main() {
     n3->next=n4;
     n4->prev=n3;
 
-    // printrev(n1);
+    printrev(n1);
     insertTail(n1,10);
     print(n1);
     cout<<endl;
     cout<<endl;
     cout<<endl;
     insertHead(n1,20);
+    print(n1);
+    cout <<endl;
+    deleteTail(n1);
+    print(n1);
+    cout<<endl;
+    deleteSeries(n1, 2 ,3);
     print(n1);
 
     return 0;

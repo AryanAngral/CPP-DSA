@@ -78,6 +78,22 @@ void print(node *head){
         temp=temp->next;
     }
 }
+
+void deleteTail(node* head){
+    if(head ==NULL){
+        cout<<"List empty!"<<endl;
+        return;
+    }
+    node * temp = head;
+    while (temp->next!=NULL){
+        temp=temp->next;
+    }
+    
+    (temp->prev)->next=NULL;
+    delete temp;
+}
+
+
 void printrev(node *head){
     node *temp= head;
     if(temp==NULL)
@@ -111,6 +127,9 @@ int main() {
     cout<<endl;
     cout<<endl;
     insertHead(n1,20);
+    print(n1);
+    cout <<endl;
+    deleteTail(n1);
     print(n1);
 
     return 0;
