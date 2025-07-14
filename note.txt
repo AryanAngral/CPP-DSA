@@ -467,3 +467,43 @@ Types of functions in C++
     - Static data members are shared among all instances of a class.
     - They are defined using `static` keyword.
     - When static is used with data memeber in a class, it makes the variable shared among all objects of the class.
+
+
+
+# Template in C++:
+    Template is a base of generic programming in C++.
+    - It allows you to write generic and reusable code that can work with any data type.
+    - Templates can be used for functions and classes.
+
+
+# Generic Programming:
+    - It is a programming paradigm that allows you to write code that works with any data type.
+    - It promotes code reusability and flexibility.
+    - C++ supports generic programming through the use of templates.
+
+
+# In C++, implementation of template is performed using/via two mwthods:
+1. Function Templates: These allow you to create a generic function that can work with any data type.
+   ```cpp
+   template <typename T>
+   T add(T a, T b) {
+       return a + b;
+   }
+    1. Generic Functions
+    2. Generic Class
+
+# Stack :
+    stack is a linear data structure that follows the LIFO(Last In First Out) principle.
+    Stack has one end only.
+    It contains only one pointer pointing to the topmost element of the stack.
+
+    Stack operations:
+        1. Push: Add an element to the top of the stack. push()
+        2. Pop: Remove the top element from the stack. pop()
+        3. Peek: Get the value of the top element without removing it. peek()
+        4. isEmpty: Check if the stack is empty. isEmpty()
+        5. isFull: Check if the stack is full (if a maximum size is defined). isFull()
+        6. Size: Get the number of elements in the stack. size()
+        7. Clear: Remove all elements from the stack. clear()
+
+
