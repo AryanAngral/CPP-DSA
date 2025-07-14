@@ -507,3 +507,68 @@ Types of functions in C++
         7. Clear: Remove all elements from the stack. clear()
 
 
+
+# Polish data notation:
+    Polish notation, also known as prefix notation, is a mathematical notation in which operators precede their operands. It eliminates the need for parentheses to indicate the order of operations.
+    In Polish notation, the expression is written in such a way that the operator comes before the operands. For example, the expression "3 + 4" would be written as "+ 3 4" in Polish notation.
+    This notation is useful in computer science and programming languages because it allows for easier parsing and evaluation of expressions without ambiguity.
+
+    An arithemetic expression in Polish notation is evaluated from left to right, with the operator applied to the operands that immediately follow it. This means that the order of operations is determined by the position of the operators and operands in the expression, rather than by parentheses or operator precedence rules.
+    For example, the expression "+ 3 * 4 5" in Polish notation would be evaluated as follows:
+    1. The first operator is "+", which takes the next two operands "3" and "* 4 5".
+    2. The second operator is "*", which takes the next two operands "4"
+    3. The result of the multiplication is "20".
+    4. Finally, the addition operator "+" takes the result of the multiplication and "3", resulting in "23".
+    Polish notation is particularly useful in computer science and programming languages because it allows for easier parsing and evaluation of expressions without ambiguity. It is also used in some programming languages, such as Lisp and Forth, where the syntax is designed to work with prefix notation.
+
+
+    1. Operator : 
+        An operator is a symbol that performs an operation on one or more operands. In programming, operators are used to manipulate data and variables.
+        Examples of operators include arithmetic operators (+, -, *, /), relational operators (==, !=, <, >), logical operators (&&, ||, !), and assignment operators (=, +=, -=).
+    2. Operand:
+        An operand is a value or variable on which an operator performs an operation. In an expression, operands are the data that the operator acts upon.
+        For example, in the expression "3 + 4", "3" and "4" are operands, and "+" is the operator. In programming, operands can be constants, variables, or expressions that evaluate to a value.
+
+    There is mainly three types of Polish notation:
+
+    1. Infix Notation:
+        In infix notation, operators are placed between their operands. This is the most common notation used in mathematics and programming languages.
+        For example, the expression "3 + 4" is in infix notation, where "+" is the operator and "3" and "4" are the operands.
+
+        eg: 
+            ( a + b ) x c ( a + b ) x  C
+            a + b - c + d
+            ( a + b ) + ( c / d ) ( a x b )
+
+    2. Prefix Notation (Polish Notation):
+        In prefix notation, operators are placed before their operands. This notation eliminates the need for parentheses to indicate the order of operations.
+        For example, the expression "3 + 4" would be written as "+ 3 4" in prefix notation.
+
+        eg:
+            + 3 4
+            - + a b c
+            x + a b c
+            / + a b c d
+
+    3. Postfix Notation (Reverse Polish Notation):
+        In postfix notation, operators are placed after their operands. This notation also eliminates the need for parentheses.
+        For example, the expression "3 + 4" would be written as "3 4 +" in postfix notation.
+
+        - postfix notaition is a computer understandable format.
+
+        eg:
+            3 4 +
+            a b + c -
+            a b + c x
+            a b c + d /
+
+void insertAtBottom(stack<int>& s, int x) {
+    if (s.size() == 0) {
+        s.push(x);
+    } else {
+        int a = s.top();
+        s.pop();
+        insertAtBottom(s, x);
+        s.push(a);
+    }
+}
