@@ -1,0 +1,574 @@
+Why we are here?
+To learn and understand the concepts of Data Structures and Algorithms using C++.
+To upskill ourselves in the field of programming.
+To prepare for technical interviews and improve problem-solving skills.
+To build a strong foundation in computer science principles.
+To explore various data structures and algorithms and their applications.
+To enhance coding efficiency and performance in software development.
+To collaborate and share knowledge with peers in the programming community.
+To gain practical experience through hands-on coding exercises and projects.
+To stay updated with the latest trends and advancements in technology.
+To develop critical thinking and analytical skills through algorithmic challenges.
+
+Why do we need skills?
+Skills are essential for personal and professional growth in the field of programming and software development. They enable individuals to:
+1. Solve complex problems efficiently.
+2. Write clean, maintainable, and efficient code.
+3. Adapt to new technologies and programming languages.
+4. Collaborate effectively with team members and stakeholders.
+5. Build robust and scalable software solutions.
+6. Prepare for technical interviews and career advancement.
+7. Contribute to open-source projects and the programming community.
+8. Stay competitive in the ever-evolving tech industry.
+9. Enhance creativity and innovation in software design and development.
+10. Foster a mindset of continuous learning and improvement in programming skills.
+11. Develop a strong understanding of algorithms and data structures.
+12. Gain confidence in tackling real-world programming challenges.
+13. Improve debugging and problem-solving techniques.
+14. Cultivate a passion for coding and software development.
+
+
+Requirements for DSA
+1. Premitive and non-premitive data types.
+
+
+namespaces is defined as a declarative region that provides a scope to the identifiers (variables, functions, classes, etc.) inside it. It helps in avoiding name conflicts and organizing code logically.
+which means that the same name can be used for different entities in different namespaces without causing ambiguity.
+
+data type is defined as a classification that specifies which type of value a variable can hold. It determines the size, range, and operations that can be performed on the data.
+
+and data structuresare specialized formats for organizing, processing, and storing data efficiently. They provide a way to manage large amounts of data and perform operations on it effectively.
+data types
+there are total of 4 types of data types in c++.
+1. Primitive Data Types: These are the basic data types provided by C++. They include:
+    - int: Represents integer values.
+    - float: Represents floating-point numbers.
+    - double: Represents double-precision floating-point numbers.
+    - char: Represents single characters.
+    - bool: Represents boolean values (true or false).
+2. Derived Data Types: These are data types that are derived from the primitive data types. They include:
+    - Arrays: A collection of elements of the same data type.
+    - Pointers: Variables that store memory addresses of other variables.
+    - Functions: Blocks of code that perform specific tasks and can return values.
+3. User-Defined Data Types: These are data types defined by the user using the primitive and derived data types. They include:
+    - Structures: A collection of variables of different data types grouped together.
+    - Unions: Similar to structures, but only one member can hold a value at a time.
+    - Enumerations: A user-defined data type that consists of a set of named integer constants.
+4. Abstract Data Types (ADTs): These are data types that are defined by their behavior rather than their implementation. They include:
+    - Lists: A collection of elements that can be accessed sequentially.
+    - Stacks: A collection of elements that follows the Last In First Out (LIFO) principle.
+    - Queues: A collection of elements that follows the First In First Out (FIFO) principle.
+
+5. Standard Data Types: These are data types provided by the C++ Standard Library, such as:
+    - std::string: Represents a sequence of characters (string).
+    - std::vector: Represents a dynamic array that can grow and shrink in size.
+6. Special Data Types: These are data types that have specific purposes, such as:
+    - std::pair: Represents a pair of values.
+    - std::tuple: Represents a fixed-size collection of values of different types.
+7. Function Types: These are types that represent functions, including:
+    - Function pointers: Pointers that point to functions.
+    - Function objects: Objects that can be called like functions.
+    - Lambda expressions: Anonymous functions that can capture variables from their surrounding scope.
+
+
+
+                                            Data Type
+                   primitive                                                non-primitive
+
+          numeric                                 non-numeric               derived         user defined
+
+    absolute/exact         approximate                                     -array           -structure
+                single precision double precision                          -pointer         -union
+                    float           double                                 -function        -class
+                    
+bitset is a non-primitive data type in C++ that represents a fixed-size sequence of bits. It is part of the C++ Standard Library and is defined in the <bitset> header. Bitsets are useful for efficiently storing and manipulating binary data, such as flags or binary representations of numbers.
+it is derived from the primitive data type bool, which can hold only two values: true or false (or 1 and 0). A bitset allows you to create a sequence of bits, where each bit can be accessed and modified individually.
+bitset in C++ is a data type that represents a fixed-size sequence of bits. It is part of the C++ Standard Library and is defined in the <bitset> header. Bitsets are useful for efficiently storing and manipulating binary data, such as flags or binary representations of numbers.
+
+A bitset is created by specifying the number of bits it should contain. Each bit can be accessed and modified individually. Bitsets provide various member functions for performing bitwise operations, counting set bits, and converting to/from strings.
+
+bitset in c is defined as a sequence of bits that can be manipulated individually. It is used to represent a fixed-size sequence of bits, where each bit can be either 0 or 1. Bitsets are useful for efficiently storing and manipulating binary data, such as flags or binary representations of numbers.
+In C++, a bitset is defined as a template class that allows you to create a fixed-size sequence of bits. It provides various member functions for manipulating individual bits, performing bitwise operations, and converting to/from strings.
+
+wide char in cpp is a data type that is used to represent characters in a wider range than the standard char type. It is typically used to support internationalization and character sets that require more than 256 characters, such as Unicode.
+Wide char is defined as wchar_t in C++. It can store a larger set of characters, including special characters, symbols, and characters from different languages. The size of wchar_t is usually 2 or 4 bytes, depending on the platform and compiler.  
+example of wide char in C++:
+```cpp
+#include <iostream>
+#include <cwchar>
+
+int main() {
+    wchar_t wideChar = L'あ';  // Japanese character
+    std::wcout << L"Wide char: " << wideChar << std::endl;
+    return 0;
+}
+
+
+does c has pointers?
+Yes, C has pointers. Pointers are a fundamental feature of the C programming language that allow you to directly manipulate memory addresses. A pointer is a variable that stores the address of another variable, enabling dynamic memory allocation, array manipulation, and efficient data structures.
+Pointers are declared using the asterisk (*) symbol, and they can be used to access and modify
+
+does c has call by reference?
+Yes, C supports call by reference through the use of pointers. In C, when you pass a pointer to a function, you are effectively passing the address of the variable, allowing the function to modify the original variable's value. This is often referred to as "call by reference" because the function can access and modify the data at the memory address pointed to by the pointer.
+
+correct ---- no its called call by address
+In C, there is no direct support for call by reference like in C++. However, you can achieve similar functionality by passing pointers to functions. When you pass a pointer to a function, you are passing the address of the variable, allowing the function to modify the original variable's value. This is often referred to as "call by address" in C.
+Here is an example of how to use pointers for call by address in C:
+```c
+#include <stdio.h>      
+void modifyValue(int *ptr) {
+    *ptr = 20; // Modify the value at the address pointed to by ptr
+}
+int main() {
+    int value = 10;
+    printf("Before: %d\n", value);
+    modifyValue(&value); // Pass the address of value
+    printf("After: %d\n", value);
+    return 0;
+}
+```
+In this example, the `modifyValue` function takes a pointer to an integer and modifies the value at the address pointed to by the pointer. This allows the function to change the original variable's value in the calling function.
+
+
+types of constructors in c++
+In C++, constructors are special member functions that are automatically called when an object of a class is created. They are used to initialize the object's data members. There are several types of constructors in C++:
+1. Default Constructor: A constructor that takes no parameters or has default values for all its parameters. It initializes the object with default values.
+   ```cpp
+   class MyClass {
+   public
+         MyClass() {
+              // Default constructor
+         }
+    };
+    ```
+2. Parameterized Constructor: A constructor that takes parameters to initialize the object with specific values.
+   ```cpp
+   class MyClass {
+   public
+            MyClass(int x) {
+                // Parameterized constructor
+            }
+        };
+        ```
+3. Copy Constructor: A constructor that creates a new object as a copy of an existing object. It takes a reference to an object of the same class as a parameter.
+
+    ```cpp
+    class MyClass {
+    public
+            MyClass(const MyClass &obj) {
+                // Copy constructor
+            }
+        };
+    ``` 
+4. Move Constructor: A constructor that transfers ownership of resources from a temporary object to a new object. It is used to optimize performance by avoiding unnecessary copying.
+   ```cpp
+   class MyClass {
+   public:
+       MyClass(MyClass &&obj) {
+           // Move constructor
+       }
+   };
+    ```
+5. Delegating Constructor: A constructor that calls another constructor in the same class to perform common initialization tasks.
+   ```cpp
+   class MyClass {
+   public:
+       MyClass(int x) {
+           // Parameterized constructor
+       }
+       MyClass() : MyClass(0) {
+           // Delegating constructor
+       }
+   };
+   ```
+6. Explicit Constructor: A constructor that is declared with the `explicit` keyword to prevent implicit conversions from other types to the class type.
+   ```cpp
+   class MyClass {
+   public:
+       explicit MyClass(int x) {
+           // Explicit constructor
+       }
+   };
+   ```
+7. Conversion Constructor: A constructor that allows implicit conversion from a single argument of a different type to the class type.
+   ```cpp
+   class MyClass {
+   public:
+       MyClass(double x) {
+           // Conversion constructor
+       }
+   };
+   ```
+8. Aggregate Initialization Constructor: A constructor that allows initialization of an object using aggregate initialization syntax, which is a list of values enclosed in braces.
+   ```cpp
+   class MyClass {
+   public:
+       MyClass(int a, double b) {
+           // Parameterized constructor
+       }
+   };
+   ``` 
+9. Inline Constructor: A constructor defined inside the class definition, which can be used for simple initialization tasks.
+   ```cpp
+   class MyClass {
+   public:
+       MyClass(int x) {
+           // Parameterized constructor
+       }
+   };
+   ```  
+
+
+
+ # Methods : 
+    it is a synonym for function in c++.
+    Methods are functions that are associated with a class and can access the class's data members. They are defined within the class definition and can be called on objects of that class.
+    Methods can be classified into two types:
+1. Member Functions: These are functions that are defined within a class and can access the class's data members. They can be called on objects of the class.
+   ```cpp
+   class MyClass {
+   public:
+       void myMemberFunction() {
+           // Member function code
+       }
+   };
+   ```
+2. Static Member Functions: These are functions that are associated with the class itself rather than with any specific object. They can be called without creating an instance of the class.
+   ```cpp
+   class MyClass {
+   public:
+       static void myStaticFunction() {
+           // Static function code
+       }
+   };
+   ``` 
+#ways to declare methods:
+1. Regular Method Declaration:
+   ```cpp
+   void myMethod();
+   ```
+2. Inline Method Definition:
+   ```cpp
+   void myMethod() {
+       // Method code
+   }
+   ```
+3. Static Method Declaration:
+   ```cpp
+   static void myStaticMethod();
+   ```
+4. Const Method Declaration:
+   ```cpp
+   void myConstMethod() const;
+   ```
+5. Virtual Method Declaration:
+   ```cpp
+   virtual void myVirtualMethod();
+   ```
+6. Pure Virtual Method Declaration (for abstract classes):
+   ```cpp
+   virtual void myPureVirtualMethod() = 0;
+   ```
+7. Friend Method Declaration (to allow access to private members of another class):
+   ```cpp
+   friend void myFriendFunction(MyClass &obj);
+   ```
+8. Template Method Declaration (for generic programming):
+   ```cpp
+   template <typename T>
+   void myTemplateMethod(T arg);
+   ```
+9. Lambda Method Declaration (for inline anonymous functions):
+   ```cpp
+   auto myLambda = [](int x, int y) {
+       return x + y;
+   };
+   ```
+
+
+
+inside calass and outside class
+In C++, methods (member functions) can be defined both inside and outside the class definition.
+1. Inside Class Definition:
+   When a method is defined inside the class definition, it is called an inline method. This means that the method's code is directly included in the class definition, and it can be called without needing to define it separately.
+   ```cpp
+   class MyClass {
+   public:
+       void myMethod() {
+           // Method code
+       }
+   };
+   ```
+2. Outside Class Definition:
+   When a method is defined outside the class definition, it is declared in the class and then defined separately. This allows for better organization of code, especially for larger classes.
+   ```cpp
+   class MyClass {
+   public:
+       void myMethod();
+   };
+   ```
+   ```cpp
+   void MyClass::myMethod() {
+       // Method code
+   }
+   ```
+
+
+
+# Constructors in C++:
+In C++, constructors are special member functions that are automatically invoked or called when an object of a class is created. They are used to initialize the object's data members. Constructors have the same name as the class and do not have a return type.
+
+Key points with respect to constructors:
+1. Constructor Name: The constructor's name must match the class name exactly.
+   i.e Constructor name is same as class name. Constructor name == class name.
+2. Automatically Invoked: Constructors are automatically called when an object of the class is created, either on the stack or heap.
+3. For Constructor memory will be allocated only once when the object is created.
+4. No Return Type: Constructors do not have a return type, not even void.
+5.With respect to parameterized constructors we can pass the arguments at the time of object creation with the help of parentheses.
+6. Constructors should be public so that they can be accessed when creating objects.
+
+
+Types of Constructors in C++:
+Majorly there are Three types of constructors in C++:
+1. Default Constructor: A constructor that takes no parameters or has default values for all its parameters
+    - it is automatically created when an object is created without any arguments when we donot create any constructor in the class then compiler will create a default constructor for us.
+    
+    ```cpp
+    class MyClass {
+    public:
+        MyClass() {
+            // Default constructor code
+        }
+    };
+    ```
+
+2. Non-Parameterized Constructor: A constructor that does not take/have any parameters.
+    ```cpp
+    class MyClass {
+    public:
+        MyClass() {
+            // Non-parameterized constructor code
+        }
+    };
+    ```
+
+3. Parameterized Constructor: A constructor that takes parameters to initialize the object with specific values.
+    ```cpp
+    class MyClass {
+    public:
+        MyClass(int x, int y) {
+            // Parameterized constructor code
+        }
+    };
+    ```
+3. Copy Constructor: A constructor that creates a new object as a copy of an existing object. It takes a reference to an object of the same class as a parameter.
+    ```cpp
+    class MyClass {
+    public:
+        MyClass(const MyClass &obj) {
+            // Copy constructor code
+        }
+    };
+    ```
+Default copy constructor is automatically generated by the compiler if no user-defined copy constructor is provided.
+example of default copy constructor:
+```cpp
+class MyClass {
+public:
+    int data;
+    MyClass(int val) : data(val) {}
+};
+
+int main() {
+    MyClass obj1(42);
+    MyClass obj2 = obj1;  // Default copy constructor is called
+    return 0;
+}
+
+# Encapsulation in C++:
+ The wraping of data and functions into a single unit (class) is called encapsulation.
+Encapsulation is a fundamental principle of object-oriented programming (OOP) that restricts direct access to an object's data members and methods. It allows for data hiding and abstraction, ensuring that the internal state of an object can only be modified through well-defined interfaces (methods).
+Key points with respect to encapsulation:
+1. Data Hiding: Encapsulation allows you to hide the internal state of an object from the outside world, exposing only what is necessary through public methods.
+2. Access Modifiers: C++ provides access modifiers (public, private, and protected)
+    to control the visibility of class members. 
+    - Public members can be accessed from outside the class.
+    - Private members can only be accessed within the class itself.
+    - Protected members can be accessed by derived classes.
+3. Abstraction: Encapsulation helps in achieving abstraction by providing a clear interface for interacting with an object while hiding its implementation details.
+4. Maintainability: Encapsulation improves code maintainability by allowing changes to the internal implementation without affecting the external interface. This means that you can modify the internal workings of a class without changing how it is used by other parts of the code.
+5. Reusability: Encapsulation promotes code reusability by allowing you to create classes that can be easily reused in different contexts without exposing their internal details.
+6. Security: Encapsulation enhances security by preventing unauthorized access to an object's internal state, ensuring that only valid operations can be performed on the data.
+ 
+
+# Static Data and member functions in C++:
+Static data members and static member functions in C++ are associated with the class itself rather than with any specific object of the class. They are shared among all instances of the class and can be accessed without creating an object of the class.
+
+
+
+Types of functions in C++:
+1. Library Functions: These are pre-defined functions provided by the C++ Standard Library, such as `cout`, `cin`, `sqrt()`, etc. They are used for various tasks like input/output operations, mathematical calculations, and string manipulations.
+2. User-Defined Functions: These are functions defined by the programmer to perform specific tasks. They can be further classified into:
+   - Regular Functions: Functions that take parameters and return a value.
+   - Void Functions: Functions that do not return a value (return type is void).
+   - Recursive Functions: Functions that call themselves to solve a problem.
+   - Inline Functions: Functions defined with the `inline` keyword to suggest to the compiler to expand the function code at the point of call.
+   - Lambda Functions: Anonymous functions that can capture variables from their surrounding scope.
+3. Special Member Functions: These are functions that are automatically called by the compiler for specific operations, such as:
+   - Constructors: Special functions used to initialize objects of a class.
+   - Destructors: Special functions used to clean up resources when an object is destroyed.
+   - Copy Constructors: Functions that create a new object as a copy of an existing object.
+   - Assignment Operators: Functions that assign the value of one object to another.
+
+Types of user defined functions in c++
+there are two types of user-defined functions in C++:
+1. Inline Functions: These are functions defined with the `inline` keyword, which suggests to the compiler to replace the function call with the function code at the point of call. This can improve performance by reducing function call overhead.
+2. Recursive Functions: Functions that call themselves to solve a problem.
+   Recursive functions are used to solve problems that can be broken down into smaller subproblems of the same type.
+
+Types of functions in C++
+1. Regular Functions: Functions that take parameters and return a value.
+2. Void Functions: Functions that do not return a value (return type is void).
+3. Recursive Functions: Functions that call themselves to solve a problem.
+4. Inline Functions: Functions defined with the `inline` keyword to suggest to the compiler to expand the function code at the point of call.
+5. Lambda Functions: Anonymous functions that can capture variables from their surrounding scope.
+
+
+
+
+
+
+
+# Constructor :
+    - constructor are the function define inside class and function name must be same as class name.
+    - constructor do not have return type.
+    - we can not call constructor explicitly.
+
+    - Types of constructor:
+        1. Default constructor / Non-parametric constructor
+        2. Parameterised constructor
+        3. Copy constructor
+
+        note: 
+            for every constructor call, there must have constructor definition otherwise it will give error.
+
+# Distructor:
+    It is used to Distroy the object of class.
+    - It deallocates the memory allocated to the object.
+
+# this keyword in C++:
+    - The `this` keyword is a pointer that points to the object for which a member function is called.
+    - It is used to access members (variables and functions) of the current object.
+    - It helps to distinguish between member variables and parameters with the same name.
+
+
+
+# Static data member:
+    - Static data members are shared among all instances of a class.
+    - They are defined using `static` keyword.
+    - When static is used with data memeber in a class, it makes the variable shared among all objects of the class.
+
+
+
+# Template in C++:
+    Template is a base of generic programming in C++.
+    - It allows you to write generic and reusable code that can work with any data type.
+    - Templates can be used for functions and classes.
+
+
+# Generic Programming:
+    - It is a programming paradigm that allows you to write code that works with any data type.
+    - It promotes code reusability and flexibility.
+    - C++ supports generic programming through the use of templates.
+
+
+# In C++, implementation of template is performed using/via two mwthods:
+1. Function Templates: These allow you to create a generic function that can work with any data type.
+   ```cpp
+   template <typename T>
+   T add(T a, T b) {
+       return a + b;
+   }
+    1. Generic Functions
+    2. Generic Class
+
+# Stack :
+    stack is a linear data structure that follows the LIFO(Last In First Out) principle.
+    Stack has one end only.
+    It contains only one pointer pointing to the topmost element of the stack.
+
+    Stack operations:
+        1. Push: Add an element to the top of the stack. push()
+        2. Pop: Remove the top element from the stack. pop()
+        3. Peek: Get the value of the top element without removing it. peek()
+        4. isEmpty: Check if the stack is empty. isEmpty()
+        5. isFull: Check if the stack is full (if a maximum size is defined). isFull()
+        6. Size: Get the number of elements in the stack. size()
+        7. Clear: Remove all elements from the stack. clear()
+
+
+
+# Polish data notation:
+    Polish notation, also known as prefix notation, is a mathematical notation in which operators precede their operands. It eliminates the need for parentheses to indicate the order of operations.
+    In Polish notation, the expression is written in such a way that the operator comes before the operands. For example, the expression "3 + 4" would be written as "+ 3 4" in Polish notation.
+    This notation is useful in computer science and programming languages because it allows for easier parsing and evaluation of expressions without ambiguity.
+
+    An arithemetic expression in Polish notation is evaluated from left to right, with the operator applied to the operands that immediately follow it. This means that the order of operations is determined by the position of the operators and operands in the expression, rather than by parentheses or operator precedence rules.
+    For example, the expression "+ 3 * 4 5" in Polish notation would be evaluated as follows:
+    1. The first operator is "+", which takes the next two operands "3" and "* 4 5".
+    2. The second operator is "*", which takes the next two operands "4"
+    3. The result of the multiplication is "20".
+    4. Finally, the addition operator "+" takes the result of the multiplication and "3", resulting in "23".
+    Polish notation is particularly useful in computer science and programming languages because it allows for easier parsing and evaluation of expressions without ambiguity. It is also used in some programming languages, such as Lisp and Forth, where the syntax is designed to work with prefix notation.
+
+
+    1. Operator : 
+        An operator is a symbol that performs an operation on one or more operands. In programming, operators are used to manipulate data and variables.
+        Examples of operators include arithmetic operators (+, -, *, /), relational operators (==, !=, <, >), logical operators (&&, ||, !), and assignment operators (=, +=, -=).
+    2. Operand:
+        An operand is a value or variable on which an operator performs an operation. In an expression, operands are the data that the operator acts upon.
+        For example, in the expression "3 + 4", "3" and "4" are operands, and "+" is the operator. In programming, operands can be constants, variables, or expressions that evaluate to a value.
+
+    There is mainly three types of Polish notation:
+
+    1. Infix Notation:
+        In infix notation, operators are placed between their operands. This is the most common notation used in mathematics and programming languages.
+        For example, the expression "3 + 4" is in infix notation, where "+" is the operator and "3" and "4" are the operands.
+
+        eg: 
+            ( a + b ) x c ( a + b ) x  C
+            a + b - c + d
+            ( a + b ) + ( c / d ) ( a x b )
+
+    2. Prefix Notation (Polish Notation):
+        In prefix notation, operators are placed before their operands. This notation eliminates the need for parentheses to indicate the order of operations.
+        For example, the expression "3 + 4" would be written as "+ 3 4" in prefix notation.
+
+        eg:
+            + 3 4
+            - + a b c
+            x + a b c
+            / + a b c d
+
+    3. Postfix Notation (Reverse Polish Notation):
+        In postfix notation, operators are placed after their operands. This notation also eliminates the need for parentheses.
+        For example, the expression "3 + 4" would be written as "3 4 +" in postfix notation.
+
+        - postfix notaition is a computer understandable format.
+
+        eg:
+            3 4 +
+            a b + c -
+            a b + c x
+            a b c + d /
+
+void insertAtBottom(stack<int>& s, int x) {
+    if (s.size() == 0) {
+        s.push(x);
+    } else {
+        int a = s.top();
+        s.pop();
+        insertAtBottom(s, x);
+        s.push(a);
+    }
+}
