@@ -572,3 +572,23 @@ void insertAtBottom(stack<int>& s, int x) {
         s.push(a);
     }
 }
+
+
+
+# Queue : 
+    Queue is a linear data structure that stores data in First In First Out Order.
+    eg:
+        Printing pages in printer.
+        Downloading files in some application.
+
+    - Operations implemented on the Queues
+        1. Enqueue: Adds an element to the back of the queue. enqueue()
+        2. Dequeue: Removes an element from the front of the queue. dequeue()
+        3. Front: Gets the value of the front element without removing it. front()
+        4. Rear: Gets the value of the back element without removing it. rear()
+        5. Peek: Gets the value of the front element without removing it. peek()
+        6. isEmpty: Checks if the queue is empty. isEmpty()
+        7. isFull: Checks if the queue is full (if a maximum size is defined). isFull()
+        8. Size: Gets the number of elements in the queue. size()
+        9. Clear: Removes all elements from the queue. clear()
+
