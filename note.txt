@@ -592,3 +592,18 @@ void insertAtBottom(stack<int>& s, int x) {
         8. Size: Gets the number of elements in the queue. size()
         9. Clear: Removes all elements from the queue. clear()
 
+
+
+# Asymptotic Notation:
+Asymptotic notation is a mathematical notation used to describe the behavior of functions as their input size approaches infinity. It provides a way to analyze the efficiency of algorithms in terms of time and space complexity. The most common asymptotic notations are:
+1. Big O Notation (O): It describes the upper bound of an algorithm's time or space complexity. It provides a worst-case scenario for the growth rate of a function.
+   - Example: O(n), O(n^2), O(log n)
+2. Omega Notation (Ω): It describes the lower bound of an algorithm's time or space complexity. It provides a best-case scenario for the growth rate of a function.
+   - Example: Ω(n), Ω(n log n), Ω(1)
+3. Theta Notation (Θ): It describes the tight bound of an algorithm's time or space complexity. It provides an average-case scenario for the growth rate of a function.
+   - Example: Θ(n), Θ(n^2), Θ(log n)
+4. Little o Notation (o): It describes an upper bound that is not tight. It indicates that a function grows slower than another function.
+    - Example: o(n), o(n^2), o(log n)
+5. Little ω Notation (ω): It describes a lower bound that is not tight. It indicates that a function grows faster than another function.
+    - Example: ω(n), ω(n log n), ω(1)
+
