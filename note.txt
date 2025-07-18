@@ -607,3 +607,20 @@ Asymptotic notation is a mathematical notation used to describe the behavior of 
 5. Little ω Notation (ω): It describes a lower bound that is not tight. It indicates that a function grows faster than another function.
     - Example: ω(n), ω(n log n), ω(1)
 
+
+
+# Dequeue :
+    Dequeue, short for "double-ended queue," is a linear data structure that allows insertion and deletion of elements from both ends (front and back). It can be thought of as a combination of a stack and a queue, providing flexibility in how elements are added and removed.
+    Dequeues can be implemented using arrays or linked lists, and they support the following operations:
+    1. Insert Front: Adds an element to the front of the dequeue.
+    2. Insert Rear: Adds an element to the back of the dequeue.
+    3. Delete Front: Removes an element from the front of the dequeue.
+    4. Delete Rear: Removes an element from the back of the dequeue.
+    5. Get Front: Retrieves the front element without removing it.
+    6. Get Rear: Retrieves the rear element without removing it.
+    7. isEmpty: Checks if the dequeue is empty.
+    8. isFull: Checks if the dequeue is full (if a maximum size is defined).
+    9. Size: Gets the number of elements in the dequeue.
+    10. Clear: Removes all elements from the dequeue.
+
+
