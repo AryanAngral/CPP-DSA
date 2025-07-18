@@ -624,3 +624,34 @@ Asymptotic notation is a mathematical notation used to describe the behavior of 
     10. Clear: Removes all elements from the dequeue.
 
 
+
+# Searching :
+    search element in a data structure is the process of finding a specific element within a collection of data. There are various searching algorithms, each with its own advantages and disadvantages depending on the data structure and the nature of the search.
+
+# Searching Types:
+    there are mainly two types of searching algorithms:
+
+1. Linear Search:
+   - Linear search is a simple searching algorithm that checks each element in a data structure sequentially
+     until the desired element is found or the end of the data structure is reached.
+    - It is suitable for small data sets or unsorted data.
+    - Time Complexity: O(n), where n is the number of elements in the data structure.
+    Algorithm:
+    (i). Start from the first element.
+    (ii). Compare the current element with the target element.
+    (iii). If they match, return the index of the current element.
+    (iv). If they do not match, move to the next element.
+    (v). Repeat steps (ii) to (iv) until the target element is found or the end of the data structure is reached.
+    (vi) If the target element is not found, return -1 or an indication that the element is not present.
+
+2. Binary Search:
+    - Binary search is a more efficient searching algorithm that works on sorted data structures.
+    - It divides the data structure into halves and eliminates half of the elements in each iteration until the desired element is found or the search space is exhausted.
+    - It requires the data structure to be sorted beforehand.
+    - Time Complexity: O(log n), where n is the number of elements in the data structure.
+    Algorithm:
+    (i). Start with the middle element of the data structure.
+    (ii). If the middle element matches the target element, return its index.
+    (iii). If the middle element is greater than the target element, repeat the search on the left half.
+    (iv). If the middle element is less than the target element, repeat the search on the right half.
+    (v). If the search space is exhausted, return -1 or an indication that the element is not present.
