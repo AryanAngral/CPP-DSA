@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include<vector>
 using namespace std;
 
 int binarySearch(int arr[], int target, int s, int e){
@@ -36,7 +36,12 @@ int binryrecur(int arr[], int t, int s, int e){
 int main() {
     int arr[7]= {14,18,34,59,66,91,99};
     // int idx=binarySearch(arr,66,0,6);
-    int idx= binryrecur(arr,18,0,6);
+    int idx= binryrecur(arr,118,0,6);
+
+
     cout<<idx<<endl;
+
+    vector<int> nums;
+   
     return 0;
 }

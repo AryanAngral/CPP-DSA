@@ -655,3 +655,39 @@ Asymptotic notation is a mathematical notation used to describe the behavior of 
     (iii). If the middle element is greater than the target element, repeat the search on the left half.
     (iv). If the middle element is less than the target element, repeat the search on the right half.
     (v). If the search space is exhausted, return -1 or an indication that the element is not present.
+
+
+# Sorting :
+    Arranging elements in a specific order, typically in ascending or descending order. Sorting algorithms are used to organize data in a way that makes it easier to search, analyze, and manipulate.
+
+1. Selection Sort :
+    Algorithm:
+    (i). Start with the first element as the minimum.
+    (ii). Compare the minimum with the rest of the elements in the array.
+    (iii). If a smaller element is found, update the minimum.
+    (iv). After scanning the entire array, swap the minimum element with the first element.
+    (v). Repeat the process for the remaining elements.
+
+    complexity:
+    - Time Complexity: O(n^2), where n is the number of elements in the array.
+    - Space Complexity: O(1), as it requires a constant amount of additional space.
+
+    best case: O(n^2)
+    average case: O(n^2)
+    worst case: O(n^2)
+
+2. Bubble Sort :
+    Algorithm:
+    (i). Start with the first element and compare it with the next element.
+    (ii). If the first element is greater than the next element, swap them.
+    (iii).Repeat the process for all adjacent pairs in the array.
+    (iv). After each pass, the largest element will "bubble up" to its correct position.
+    (v). Continue for n-1 passes, where n is the number of elements in the array.
+
+    complexity:
+    - Time Complexity: O(n^2), where n is the number of elements in the array.
+    - Space Complexity: O(1), as it requires a constant amount of additional space.
+
+    best case: O(n)
+    average case: O(n^2)
+    worst case: O(n^2)
