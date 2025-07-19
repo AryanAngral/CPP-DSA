@@ -691,3 +691,22 @@ Asymptotic notation is a mathematical notation used to describe the behavior of 
     best case: O(n)
     average case: O(n^2)
     worst case: O(n^2)
+
+
+# Insertion sort:
+    Insertion sort is a simple sorting algorithm that builds a sorted array one element at a time. It works by repeatedly taking an element from the unsorted portion of the array and inserting it into the correct position in the sorted portion.
+    Algorithm:
+    (i). Start from the second element (index 1) as the key.
+    (ii). Compare the key with the elements in the sorted portion (to the left).
+    (iii). Shift all elements larger than the key to the right.
+    (iv). Insert the key into its correct position.
+    (v). Repeat the process for all elements in the array.
+
+    Complexity:
+    - Time Complexity: O(n^2), where n is the number of elements in the array.
+    - Space Complexity: O(1), as it requires a constant amount of additional space. 
+
+    Best Case: O(n) (when the array is already sorted)
+    Average Case: O(n^2)
+    Worst Case: O(n^2)
+
