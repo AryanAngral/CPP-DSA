@@ -710,3 +710,46 @@ Asymptotic notation is a mathematical notation used to describe the behavior of 
     Average Case: O(n^2)
     Worst Case: O(n^2)
 
+# Merge Sort:
+    Merge sort is a divide-and-conquer sorting algorithm that divides the array into smaller subarrays, sorts them, and then merges them back together.
+    Algorithm:
+    (i). Divide the array into two halves.
+    (ii). Recursively sort each half.
+    (iii). Merge the two sorted halves back together.
+
+    Complexity:
+    - Time Complexity: O(n log n), where n is the number of elements in the array.
+    - Space Complexity: O(n), as it requires additional space for merging.
+
+    Best Case: O(n log n)
+    Average Case: O(n log n)
+    Worst Case: O(n log n)
+
+
+# Quick Sort:
+    Quick sort is a divide-and-conquer sorting algorithm that selects a "pivot" element and partitions the array into two sub-arrays: elements less than the pivot and elements greater than the pivot. The sub-arrays are then sorted recursively.
+
+    Complexity:
+    - Time Complexity: O(n log n) on average, O(n^2) in the worst case.
+    - Space Complexity: O(log n) due to the recursive call stack.
+
+    Best Case: O(n log n)
+    Average Case: O(n log n)
+    Worst Case: O(n^2)
+    
+
+# Tree :
+    A tree is a hierarchical data structure that consists of nodes connected by edges. It is used to represent relationships between elements in a hierarchical manner, such as file systems, organizational structures, and more.
+    Key characteristics of trees:
+    1. Root Node: The topmost node in the tree.
+    2. Child Nodes: Nodes that are directly connected to another node (parent).
+    3. Leaf Nodes: Nodes that do not have any children.
+    4. Height: The length of the longest path from the root to a leaf node.
+    5. Depth: The length of the path from the root to a specific node.
+
+    Types of Trees:
+    1. Binary Tree: A tree where each node has at most two children (left and right).
+    2. Binary Search Tree (BST): A binary tree where the left child is less than the parent and the right child is greater than the parent.
+    3. AVL Tree: A self-balancing binary search tree that maintains its height balance after insertions and deletions.
+    4. Red-Black Tree: A self-balancing binary search tree with additional properties to ensure balance.
+    
