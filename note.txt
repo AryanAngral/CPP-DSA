@@ -753,3 +753,26 @@ Asymptotic notation is a mathematical notation used to describe the behavior of 
     3. AVL Tree: A self-balancing binary search tree that maintains its height balance after insertions and deletions.
     4. Red-Black Tree: A self-balancing binary search tree with additional properties to ensure balance.
     
+
+
+# Map : 
+    A map is a collection of key-value pairs, where each key is unique and is used to retrieve the corresponding value. Maps are also known as associative arrays or dictionaries in different programming languages.
+    Key characteristics of maps:
+    1. Key-Value Pair: Each entry in a map consists of a key and a value.
+    2. Unique Keys: Keys must be unique within a map, but values can be duplicated.
+    3. Fast Lookup: Maps provide efficient lookup, insertion, and deletion operations based on keys.
+    4. Iteration: Maps can be iterated over to access keys and values.
+
+    Types of Maps:
+    1. Hash Map: A map that uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.
+    2. Tree Map: A map that maintains its entries in a sorted order based on the keys, typically implemented as a balanced binary search tree.
+    3. Linked Hash Map: A map that maintains a doubly-linked list of its entries, preserving the insertion order.
+
+    Complexity:
+    - Time Complexity: O(1) for average-case lookup, insertion, and deletion in hash maps.
+    - Time Complexity: O(log n) for lookup, insertion, and deletion in tree maps.
+    - Time Complexity: O(1) for average-case lookup, insertion, and deletion in linked hash maps.
+
+    - Space Complexity: O(n) for all types of maps, where n is the number of entries in the map.
+
+
