@@ -775,4 +775,10 @@ Asymptotic notation is a mathematical notation used to describe the behavior of 
 
     - Space Complexity: O(n) for all types of maps, where n is the number of entries in the map.
 
+# Unordered Map:
+    An unordered map is a type of map that stores key-value pairs in no particular order. It is typically implemented using a hash table, which allows for fast access to elements based on their keys.
 
+    Complexity :
+    - Time Complexity: O(1) for average-case lookup, insertion, and deletion.
+    - Space Complexity: O(n), where n is the number of elements in the unordered map
+    

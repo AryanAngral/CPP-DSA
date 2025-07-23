@@ -1,11 +1,11 @@
 #include <iostream>
-#include<map>
+#include<unordered_map>
 
 using namespace std;
 
 int main() {
-
-    map < string, int > mp;
+    
+    unordered_map< string, int > mp;
 
     mp["Aryan"] = 5;
     mp["Sury"] = 2;
@@ -16,6 +16,6 @@ int main() {
     for(auto x: mp){
         cout<<x.first<<", "<<x.second<<"\n";
     }
- 
+
     return 0;
 }
