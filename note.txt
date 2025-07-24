@@ -782,3 +782,44 @@ Asymptotic notation is a mathematical notation used to describe the behavior of 
     - Time Complexity: O(1) for average-case lookup, insertion, and deletion.
     - Space Complexity: O(n), where n is the number of elements in the unordered map
     
+# Ordered Map:
+    An ordered map is a type of map that maintains the order of its elements based on the keys. It is typically implemented using a balanced binary search tree, which allows for efficient access to elements while preserving their order.
+
+    Complexity:
+    - Time Complexity: O(log n) for lookup, insertion, and deletion.
+    - Space Complexity: O(n), where n is the number of elements in the ordered map.
+
+
+# AVL tree:
+    An AVL tree is a self-balancing binary search tree where the difference in heights between the left and right subtrees (balance factor) is at most 1 for all nodes. This property ensures that the tree remains balanced, providing efficient search, insertion, and deletion operations.
+
+    Complexity:
+    - Time Complexity: O(log n) for lookup, insertion, and deletion.
+    - Space Complexity: O(n), where n is the number of elements in the AVL tree.
+
+    AVL stands for Adelson-Velsky and Landis, the inventors of this data structure. The AVL tree maintains its balance by performing rotations during insertion and deletion operations to ensure that the balance factor remains within the allowed range.
+
+# Binary Search Tree (BST):
+    A binary search tree (BST) is a binary tree where each node has at most two children, and the left child is less than the parent node while the right child is greater than the parent node. This property allows for efficient searching, insertion, and deletion operations.
+
+    Complexity:
+    - Time Complexity: O(log n) for lookup, insertion, and deletion.
+    - Space Complexity: O(n), where n is the number of elements in the BST.
+
+# AVL tree algorithm:
+    The AVL tree algorithm involves the following steps for insertion and deletion:
+    1. Insertion:
+       - Insert the new node as you would in a regular binary search tree.
+       - After insertion, check the balance factor of each node from the inserted node up to the root.
+       - If the balance factor is greater than 1 or less than -1, perform rotations to restore balance.
+         - Left Rotation: Used when the left subtree is heavier.
+         - Right Rotation: Used when the right subtree is heavier.
+         - Left-Right Rotation: Used when the left subtree's right child is heavier.
+         - Right-Left Rotation: Used when the right subtree's left child is heavier.
+
+    2. Deletion:
+       - Delete the node as you would in a regular binary search tree.
+       - After deletion, check the balance factor of each node from the deleted node up to the root.
+       - If the balance factor is greater than 1 or less than -1, perform rotations to restore balance.
+
+    The AVL tree maintains its height balance after every insertion and deletion operation, ensuring that it remains efficient for search operations.
