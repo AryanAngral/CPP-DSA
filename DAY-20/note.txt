@@ -823,5 +823,3 @@ Asymptotic notation is a mathematical notation used to describe the behavior of 
        - If the balance factor is greater than 1 or less than -1, perform rotations to restore balance.
 
     The AVL tree maintains its height balance after every insertion and deletion operation, ensuring that it remains efficient for search operations.
-
-     
