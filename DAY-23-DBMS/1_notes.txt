@@ -1,0 +1,350 @@
+Data:
+    - Raw facts and figures
+    - Unprocessed information
+    - Can be qualitative or quantitative
+    - Example: Numbers, text, images, etc.
+Information:
+    - Processed data that is meaningful
+    - Organized and structured
+    - Helps in decision-making
+    - Example: A report summarizing sales data
+
+Metadata:
+    - Data about data
+    - Provides context and meaning to data
+    - Helps in understanding the origin, purpose, and structure of data
+    - Example: Data dictionary, schema definitions
+
+Relational Database:
+    - Stores data in a structured format using tables
+    - Uses SQL (Structured Query Language) for querying
+    - Example: MySQL, PostgreSQL, Oracle
+
+Non Relational Database:
+    - Stores data in a more flexible format, often using key-value pairs or documents
+    - Does not require a fixed schema
+    - Example: MongoDB, Cassandra, Redis
+
+RDBMS (Relational Database Management System):
+    - A software system that manages relational databases
+    - Provides tools for data storage, retrieval, and management
+    - Ensures data integrity and security
+    - Example: MySQL, PostgreSQL, Oracle Database
+
+. Tables : 
+    - A collection of related data entries
+    - Consists of rows and columns
+    - Each row represents a record, and each column represents a field
+    - Example: A table for customer information with fields like name, email, and phone number
+. Rows or Records:
+    - Individual entries in a table
+    - Each row contains data for a specific entity
+    - Example: A row in a customer table containing details for one customer
+. Columns or Fields:
+    - Attributes or properties of the data
+    - Each column has a specific data type
+    - Example: In a customer table, columns might include name (string), age (integer), and email (string)
+. Primary Key:
+    - A unique identifier for each record in a table
+    - Example: In a customer table, the primary key might be the customer ID
+
+Example Table:
+    - | Customer ID | Name       | Email              | Phone Number  |
+      |-------------|------------|--------------------|---------------|
+      | 1           | John Doe   | john@example.com   | 123-456-7890  |
+      | 2           | Jane Smith | jane@example.com   | 098-765-4321  |
+      | 3           | Bob Johnson| bob@example.com    | 555-555-5555  |
+
+.Tuple:
+    - A single row in a table
+    - Represents a complete record
+    - Example: (1, 'John Doe', 'john@example.com', '123-456-7890')
+
+
+
+
+C:\Users\ARYAN ANGRAL>SQLPLUS / AS SYSDBA
+
+SQL*Plus: Release 23.0.0.0.0 - Production on Tue Jul 29 11:40:07 2025
+Version 23.6.0.24.10
+
+Copyright (c) 1982, 2024, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 23ai Free Release 23.0.0.0.0 - Develop, Learn, and Run for Free
+Version 23.6.0.24.10
+
+SQL> connect
+Enter user-name: system
+Enter password:
+ERROR:
+ORA-01017: invalid credential or not authorized; logon denied
+Help: https://docs.oracle.com/error-help/db/ora-01017/
+
+
+Warning: You are no longer connected to ORACLE.
+SQL> connect
+Enter user-name: system
+Enter password:
+Connected.
+SQL> USE PLUGABLE DATABASE MIET;
+SP2-0734: unknown command beginning "USE PLUGAB..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SQL> USE PLUGGABLE DATABASE MIET;
+SP2-0734: unknown command beginning "USE PLUGGA..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SQL> USE PLUGGABLE DATABASE miet;
+SP2-0734: unknown command beginning "USE PLUGGA..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SQL> SHOW PLUGGABLE DATABASE
+SP2-0158: unknown SHOW option "PLUGGABLE"
+Help: https://docs.oracle.com/error-help/db/sp2-0158/
+SP2-0158: unknown SHOW option "DATABASE"
+Help: https://docs.oracle.com/error-help/db/sp2-0158/
+SQL> SHOW PLUGGABLE DATABASES
+SP2-0158: unknown SHOW option "PLUGGABLE"
+Help: https://docs.oracle.com/error-help/db/sp2-0158/
+SP2-0158: unknown SHOW option "DATABASES"
+Help: https://docs.oracle.com/error-help/db/sp2-0158/
+SQL> SHOW PLUGGABLEDATABASES
+SP2-0735: unknown SHOW option beginning "PLUGGABLED..."
+Help: https://docs.oracle.com/error-help/db/sp2-0735/
+SQL> SELECT NAME, OPEN_MODE FROM V$PDBS;
+
+NAME
+--------------------------------------------------------------------------------
+OPEN_MODE
+----------
+PDB$SEED
+READ ONLY
+
+FREEPDB1
+READ WRITE
+
+MIET
+MOUNTED
+
+
+SQL> SELECT MIET, OPEN_MODE FROM V$PDBS;
+SELECT MIET, OPEN_MODE FROM V$PDBS
+       *
+ERROR at line 1:
+ORA-00904: "MIET": invalid identifier
+Help: https://docs.oracle.com/error-help/db/ora-00904/
+
+
+SQL> SHOW USER;
+USER is "SYSTEM"
+SQL> SHOW CON_NAME;
+
+CON_NAME
+------------------------------
+CDB$ROOT
+SQL> SHOW PARAMETER db_name;
+
+NAME                                 TYPE        VALUE
+------------------------------------ ----------- ------------------------------
+db_name                              string      FREE
+SQL> ALTER SESSION SET CONTAINER = MYPDB;
+ERROR:
+ORA-65011: Pluggable database MYPDB does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-65011/
+
+
+SQL> ALTER SESSION SET CONTAINER = MIET;
+ERROR:
+ORA-65024: Pluggable database MIET is not open.
+Help: https://docs.oracle.com/error-help/db/ora-65024/
+
+
+SQL> SQL> SHOW CON_NAME;
+SP2-0734: unknown command beginning "SQL> SHOW ..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SQL> SQL> ALTER SESSION SET CONTAINER = CDB$ROOT;
+SP2-0734: unknown command beginning "SQL> ALTER..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SQL> SHOW CON_NAME;
+
+CON_NAME
+------------------------------
+CDB$ROOT
+SQL> SP2-0042: unknown command "S" - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0042/
+SQL> SP2-0042: unknown command "S" - rest of line ignored.^C
+C:\Users\ARYAN ANGRAL>
+
+C:\Users\ARYAN ANGRAL>
+
+C:\Users\ARYAN ANGRAL>
+
+C:\Users\ARYAN ANGRAL>
+
+C:\Users\ARYAN ANGRAL>
+
+C:\Users\ARYAN ANGRAL>
+
+C:\Users\ARYAN ANGRAL>SQLPLUS / AS SYSDBA
+
+SQL*Plus: Release 23.0.0.0.0 - Production on Tue Jul 29 11:50:56 2025
+Version 23.6.0.24.10
+
+Copyright (c) 1982, 2024, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 23ai Free Release 23.0.0.0.0 - Develop, Learn, and Run for Free
+Version 23.6.0.24.10
+
+SQL> SHOW CON_NAME;
+
+CON_NAME
+------------------------------
+CDB$ROOT
+SQL> -- Step 1: Connect as SYSDBA (from CDB$ROOT)
+SQL> SQL> CONNECT sys/password AS SYSDBA;
+SP2-0734: unknown command beginning "SQL> CONNE..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SQL>
+SQL> -- Step 2: Create a user (example: aryan_user)
+SQL> SQL> CREATE USER aryan_user IDENTIFIED BY strong_password;
+SP2-0734: unknown command beginning "SQL> CREAT..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SQL>
+SQL> -- Step 3: Grant privileges
+SQL> SQL> GRANT CREATE SESSION TO aryan_user;
+SP2-0734: unknown command beginning "SQL> GRANT..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SQL>
+SQL> -- (Optional) Grant more privileges:
+SQL> SQL> GRANT CONNECT, RESOURCE TO aryan_user;
+SP2-0734: unknown command beginning "SQL> GRANT..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SQL> -- Switch to your pluggable DB
+SQL> SQL> ALTER SESSION SET CONTAINER = MIET;
+SP2-0734: unknown command beginning "SQL> ALTER..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SQL>
+SQL> -- Then run the above CREATE USER and GRANT commands
+SQL> SQL> ALTER SESSION SET CONTAINER = MIET;
+SP2-0734: unknown command beginning "SQL> ALTER..." - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0734/
+SQL> SP2-0042: unknown command "S" - rest of line ignored.
+Help: https://docs.oracle.com/error-help/db/sp2-0042/
+SQL> ALTER SESSION SET CONTAINER = MIET;
+
+
+C:\Users\ARYAN ANGRAL>
+C:\Users\ARYAN ANGRAL>SQLPLUS / AS SYSDBA
+
+SQL*Plus: Release 23.0.0.0.0 - Production on Tue Jul 29 11:54:21 2025
+Version 23.6.0.24.10
+
+Copyright (c) 1982, 2024, Oracle.  All rights reserved.
+
+
+Connected to:
+Oracle Database 23ai Free Release 23.0.0.0.0 - Develop, Learn, and Run for Free
+Version 23.6.0.24.10
+
+SQL> ALTER SESSION SET CONTAINER = MIET;
+
+Session altered.
+
+SQL> CREATE USER ARYAN IDENTIFIED BY abcd;
+CREATE USER ARYAN IDENTIFIED BY abcd
+*
+ERROR at line 1:
+ORA-01109: database not open
+Help: https://docs.oracle.com/error-help/db/ora-01109/
+
+
+SQL> SELECT STATUS FROM V$INSTANCE;
+
+STATUS
+------------
+MOUNTED
+
+SQL> ALTER DATABASE OPEN;
+
+Database altered.
+
+SQL> SELECT STATUS FROM V$INSTANCE;
+
+STATUS
+------------
+OPEN
+
+SQL> ALTER SESSION SET CONTAINER = MIET;
+
+Session altered.
+
+SQL> CREATE USER ARYAN IDENTIFIED BY abcd;
+
+User created.
+
+SQL> GRANT CONNECT, RESOURCE TO ARYAN;
+
+Grant succeeded.
+
+SQL> SELECT username FROM dba_users ORDERED BY username;
+SELECT username FROM dba_users ORDERED BY username
+                                       *
+ERROR at line 1:
+ORA-03048: SQL reserved word 'BY' is not syntactically valid following '...FROM
+dba_users ORDERED '
+Help: https://docs.oracle.com/error-help/db/ora-03048/
+
+
+SQL> SELECT username FROM dba_users ORDER BY username;
+
+USERNAME
+--------------------------------------------------------------------------------
+ANONYMOUS
+APPQOSSYS
+ARYAN
+AUDSYS
+CTXSYS
+DBSFWUSER
+DBSNMP
+DGPDB_INT
+DIP
+DVF
+DVSYS
+
+USERNAME
+--------------------------------------------------------------------------------
+GGSHAREDCAP
+GGSYS
+GSMADMIN_INTERNAL
+GSMCATUSER
+GSMUSER
+LBACSYS
+MDDATA
+MDSYS
+OJVMSYS
+OLAPSYS
+OUTLN
+
+USERNAME
+--------------------------------------------------------------------------------
+PDBADMIN
+REMOTE_SCHEDULER_AGENT
+SYS
+SYS$UMF
+SYSBACKUP
+SYSDG
+SYSKM
+SYSRAC
+SYSTEM
+VECSYS
+WMSYS
+
+USERNAME
+--------------------------------------------------------------------------------
+XDB
+XS$NULL
+
+35 rows selected.
+
+SQL>
