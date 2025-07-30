@@ -1,0 +1,18 @@
+PL/SQL (Procedural Language / Strictured Query Language):
+    PL/SQL is Oracle's procedural extension for SQL.
+    It lets you write code blocks that include: SELECT, INSERT, UPDATE, DELETE statements, and control structures like loops and conditionals.
+    PL/SQL code blocks can be anonymous or named (stored procedures, functions, packages).
+
+    - You can write procedures, functions and triggers.
+    - You can handle errors.
+    - You can reuse code.
+    - You can use conditional logic and loops.
+
+    Basic code / Synatx:
+        DECLARE
+            -- Declare variables
+        BEGIN
+            -- WRITE SQL LOGIC OR STATEMENT HERE.
+        END;
+        /
+    

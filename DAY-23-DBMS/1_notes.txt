@@ -348,3 +348,26 @@ XS$NULL
 35 rows selected.
 
 SQL>
+
+
+
+Data Tyoes in SQL:
+
+  1. Number:
+
+  2. CHAR:
+    1. char:
+    2. varchar
+    3. varchar2
+    4. long
+    5. raw:
+        BLOB, CLOB, NCLOB
+    6. Date
+
+  Create table:
+    Syntax:
+      CREATE TABLE table_name( varl data_type, var2 d_type )
+
+
+
+// Write a PLSQL quer
