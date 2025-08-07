@@ -17,7 +17,7 @@ int main() {
 
     float bolo = 22.97;
     // helloPtr = &bolo; - Error
-;
+
 
     return 0;
 }

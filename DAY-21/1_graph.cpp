@@ -1,4 +1,4 @@
-// 1_graph.cpp - Basic Graph (Adjacency List)
+
 #include <iostream>
 #include <vector>
 using namespace std;
@@ -10,7 +10,7 @@ public:
     Graph(int v) : V(v), adj(v) {}
     void addEdge(int u, int v) {
         adj[u].push_back(v);
-        adj[v].push_back(u); // undirected
+        adj[v].push_back(u); 
     }
     void print() {
         for(int i=0; i<V; ++i) {
